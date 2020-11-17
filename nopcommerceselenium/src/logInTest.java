@@ -20,16 +20,16 @@ public class logInTest extends BaseTest {
         closeBrowser();
     }
     @Test
-    public void verifyUserShouldNavigateToLoginPageSuccessfully() {
+    public void verifyUserShouldNavigateToLoginPageSuccessfully() {  //this method will nag=vigate to login page
         WebElement loginButton = driver.findElement(By.className("ico-login"));
         loginButton.click();
-        String expectedMessage = "Welcome, Please Sign In!";
+        String expectedMessage = "Welcome, Please Sign In!";  //will verify that we are on right place
         WebElement message = driver.findElement(By.xpath("//h1[contains(text(),'Welcome, Please Sign In!')]"));
         String actualMessage = message.getText();
         Assert.assertEquals(expectedMessage, actualMessage);
     }
     @Test
-    public void verifyUserShouldGetErrorMessageWithInvalidData() throws InterruptedException {
+    public void verifyUserShouldGetErrorMessageWithInvalidData() throws InterruptedException {   //negative test case
         WebElement loginButton = driver.findElement(By.className("ico-login"));
         loginButton.click();
         WebElement emailField = driver.findElement(By.id("Email"));

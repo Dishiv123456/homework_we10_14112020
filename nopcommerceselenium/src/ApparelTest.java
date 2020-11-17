@@ -9,12 +9,12 @@ public class ApparelTest extends BaseTest {
     @Before
     public void setUp (){
         openBrowser(baseUrl);
-    }
-    public void tearDown(){
+    }  //chrome browser will open
+    public void tearDown(){ //to close browser
         closeBrowser();
     }
     @Test
-    public void verifyThatUserShouldNavigateToApparelPage(){
+    public void verifyThatUserShouldNavigateToApparelPage(){ //click on page and verify
         WebElement apparelsPage = driver.findElement(new By.ByXPath("//body/div[6]/div[2]/ul[1]/li[3]/a[1]"));
         apparelsPage.click();
 
